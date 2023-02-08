@@ -1,38 +1,71 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  background: url(/src/images/nova.jpg);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homepage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.products{
+  display: flex;
+}
+.singleProduct{
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  margin: 20px;
+  border-style: solid;
+  background-color: aliceblue;
+  border-width: 5px;
+  border-color: rgb(228, 238, 93);
+  border-radius: 30px;
+  width: 500px;
+  height: 650px;
+  margin-top: 100px;
+  padding: 20px;  
+}
+.cena{
+  margin: 15px;
+}
+.opis{
+  text-align: justify;
+}
+.naziv{
+  text-align: center;
+  padding-bottom: 10px;
+}
+.buton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.emptyCart{
+  background-color: aliceblue;
+  text-align: center;
+  margin-top: 200px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: rgb(12, 53, 88);
+  padding: 10px;
+  font-size: 7em;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

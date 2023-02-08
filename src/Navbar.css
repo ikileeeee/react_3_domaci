@@ -1,0 +1,25 @@
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.deo{
+    text-decoration: none;
+    color: rgb(12, 53, 88);
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: aliceblue;
+}
+h1{
+    
+    color: rgb(12, 53, 88);
+}
