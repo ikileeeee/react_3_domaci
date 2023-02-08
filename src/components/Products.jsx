@@ -11,6 +11,7 @@ function Products({products, dodaj, izbaci}) {
             key={product.id}
             dodaj={dodaj}
             izbaci={izbaci}
+            flag ={1}
             />
         );
       }
