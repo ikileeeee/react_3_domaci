@@ -23,3 +23,9 @@ h1{
     
     color: rgb(12, 53, 88);
 }
+
+.korpa{
+    display: flex;
+    flex-direction: row;
+}
+  

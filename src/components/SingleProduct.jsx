@@ -10,6 +10,11 @@ function SingleProduct({product, dodaj, izbaci, flag}) {
         <img src={images[product.imgIndex]} alt="Images" className='image'/>
         {flag === 1 ? <div className="opis">{product.opis}</div> : <></>}
 
+          <div className="cene">
+            <div className="cena">Cena: {product.cena} dinara</div>
+            <div className="cena">Ukupna cena iznosi: {product.ukupnaCena} dinara</div>
+          </div>
+
         <div className="butons">
             {flag===1 ? <> <div className="btn" onClick={()=>dodaj(product.id)}>
       

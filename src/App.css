@@ -38,18 +38,19 @@ html{
   display: flex;
   flex-direction: column;
   grid-template-rows: auto;
-  row-gap: 10px;
+  row-gap: 7px;
   margin: 20px;
   border-style: solid;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   border-width: 5px;
   border-color: rgb(228, 238, 93);
   border-radius: 30px;
   width: 500px;
-  height: 650px;
+  height: 710px;
   margin-top: 100px;
   padding: 20px;  
 }
+
 .cena{
   margin: 15px;
 }
@@ -85,14 +86,39 @@ html{
 .emptyCart{
   background-color: aliceblue;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
   color: rgb(12, 53, 88);
-  padding: 10px;
-  font-size: 7em;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 4em;
+}
+.cene{
+  display: flex;
+  flex-direction: row;
 }
 
-
+.pretrazi{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  border-color: darkblue;
+  padding: 10px;
+}
+.pretraziPolje{
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+.btnP{
+  color: rgb(228, 238, 93);
+  margin-left: 5px;
+  font-size: large;
+}
 
 

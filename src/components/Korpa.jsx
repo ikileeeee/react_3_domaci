@@ -1,6 +1,7 @@
 import React from 'react'
 import SingleProduct from './SingleProduct';
 
+
 function Korpa({numProducts, products}) {
     console.log("Na stanju: "+numProducts);
     if(numProducts==0){

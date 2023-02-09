@@ -16,6 +16,8 @@ function App() {
       cena: 4000,
       imgIndex:0,
       kolicina:0,
+      naStanju: 8,
+      ukupnaCena:0,
     },
     {
       id:2,
@@ -24,6 +26,8 @@ function App() {
       cena: 5000,
       imgIndex:1,
       kolicina:0,
+      naStanju: 4,
+      ukupnaCena:0,
     },
     {
       id:3,
@@ -32,9 +36,14 @@ function App() {
       cena: 3000,
       imgIndex:2,
       kolicina:0,
+      naStanju: 6,
+      
+      ukupnaCena:0,
     },
 
   ]);
+  
+  const [trenutniPr, setTrenutnePr]=useState(products);
   function osveziKorpu(){
     setKorpaProducts(products.filter((product)=>product.kolicina>0));
     console.log(korpaProducts);
@@ -43,11 +52,19 @@ function App() {
   function dodaj(id){
     products.forEach((product)=>{
       if(product.id===id){
+        if(product.kolicina<product.naStanju){
         console.log("Dodat je:"+ id);
         setKorpaProducts(korpaProducts+1);
         product.kolicina++;
+        product.ukupnaCena=product.ukupnaCena+product.cena;
         osveziKorpu();
+      }else{
+        alert(
+          "Ukupna kolicina na stanju "+product.naziv+" je "+product.naStanju
+        );
+
       }
+    }
     }
     );
   }
@@ -57,6 +74,7 @@ function App() {
         if(product.kolicina>0){
           product.kolicina--;
         setKorpaProducts(korpaProducts-1);
+        product.ukupnaCena=product.ukupnaCena-product.cena;
         osveziKorpu();
         }
       }
@@ -64,15 +82,39 @@ function App() {
     );
   }
 
+  function pretrazi(cena){
+    if(cena==0){
+      setTrenutnePr(products);
+    }else{
+      console.log("U pretrazi");
+      console.log(cena);
+      const pr=[];
+      var k=0;
+      products.forEach((product)=>{
+        if(product.cena<=cena){
+          pr[k++]=product;
+        }
+      });
+      pr.forEach((product)=>{
+        console.log(product.naziv);
+      })
+      setTrenutnePr(pr);
+    }
+  }
+
   
   return <div className="App">
       <BrowserRouter className="App">
-        <NavBar/>
+        <NavBar>
+        </NavBar>
+        <div className='homepage'>
         <Routes>
+          
           <Route path='/' element={
-            <Products products={products}
+            <Products products={trenutniPr}
             dodaj={dodaj}
             izbaci={izbaci}
+            pretrazi={pretrazi}
             />
           }
           />
@@ -87,7 +129,7 @@ function App() {
 
 
         </Routes>
-
+        </div>
 
       </BrowserRouter>
     </div>
