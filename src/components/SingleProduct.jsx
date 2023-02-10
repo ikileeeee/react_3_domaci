@@ -6,7 +6,7 @@ function SingleProduct({product, dodaj, izbaci, flag}) {
   return (
     <div className="homepage">
         <div className={flag === 1 ? "singleProduct" : "uKorpi"}>
-        <div className="naziv">{product.naziv}</div>
+        <h3><div className="naziv">{product.naziv}</div></h3>
         <img src={images[product.imgIndex]} alt="Images" className='image'/>
         {flag === 1 ? <div className="opis">{product.opis}</div> : <></>}
 

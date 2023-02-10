@@ -10,18 +10,18 @@ body{
 }
 .deo{
     text-decoration: none;
-    color: rgb(12, 53, 88);
+    color: rgb(255, 255, 255);
 }
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 8vh;
-    background-color: aliceblue;
+    background-color: rgb(196, 84, 140);
 }
 h1{
     
-    color: rgb(12, 53, 88);
+    color: rgb(255, 255, 255);
 }
 
 .korpa{

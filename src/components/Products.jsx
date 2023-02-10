@@ -2,7 +2,6 @@ import React from 'react'
 import SingleProduct from './SingleProduct'
 import {BsSearch} from "react-icons/bs";
 import $ from "jquery";
-import NavBar from './NavBar';
 
 
 function Products({products, dodaj, izbaci, pretrazi}) {

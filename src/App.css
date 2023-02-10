@@ -2,31 +2,43 @@
   text-align: center;
 }
 html{
-  background: url(/src/images/nova.jpg);
+  background: url(/src/images/nova2.jpg);
 }
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 .homepage{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+.for{
+  margin-left: 100px;
+  display: flex;
+  grid-template-columns: auto;
+}
+.korpa{
+  display: grid;
+  justify-content: center;
+}
+
 .products{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 .uKorpi{
   display: flex;
   flex-direction: column;
-  grid-template-rows: auto;
+  grid-template-columns: auto;
   row-gap: 10px;
   margin: 20px;
   border-style: solid;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   border-width: 5px;
-  border-color: rgb(228, 238, 93);
+  border-color: rgb(196, 84, 140);
   border-radius: 30px;
   width: 500px;
   height: 550px;
@@ -37,19 +49,20 @@ html{
 .singleProduct{
   display: flex;
   flex-direction: column;
-  grid-template-rows: auto;
+  grid-template-columns: auto;
   row-gap: 7px;
   margin: 20px;
   border-style: solid;
   background-color: rgb(255, 255, 255);
   border-width: 5px;
-  border-color: rgb(228, 238, 93);
+  border-color: rgb(196, 84, 140);
   border-radius: 30px;
   width: 500px;
   height: 710px;
   margin-top: 100px;
   padding: 20px;  
 }
+
 
 .cena{
   margin: 15px;
@@ -75,7 +88,7 @@ html{
   border-width: 0px;
 }
 .btn:active{
-  background-color: rgb(225, 236, 173);
+  background-color:rgb(230, 216, 223);
 }
 
 .App-header {
@@ -84,7 +97,7 @@ html{
   justify-content: center;
 }
 .emptyCart{
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   margin-top: 5%;
   margin-left: 20%;
@@ -107,18 +120,58 @@ html{
   position: absolute;
   display: flex;
   flex-direction: row;
-  border-color: darkblue;
+  border-color: rgb(196, 84, 140);
   padding: 10px;
+ 
 }
 .pretraziPolje{
   display: flex;
   flex-direction: row;
   height: 20px;
+ 
 }
 .btnP{
-  color: rgb(228, 238, 93);
+  color: rgb(196, 84, 140);
   margin-left: 5px;
   font-size: large;
 }
-
+#form{
+  display: grid;
+  margin-top: 100px; 
+  margin-bottom: 20px;
+}
+.formaf{
+  margin-top: 10px;
+  display:grid;
+  grid-template-columns: auto auto;
+  row-gap: 10px;
+  padding: 20px;
+  border: 3px solid rgb(196, 84, 140);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 18px;
+  width: 450px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.nazivForme{
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+  
+  margin-left: 130px;
+}
+.for{
+  display: flex;
+  align-items: center;
+}
+.submit{
+  grid-column: 1/ span 2;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  background-color:rgb(196, 84, 140);
+  border-color: rgb(196, 84, 140);
+  color: rgb(0, 0, 0);
+}
 

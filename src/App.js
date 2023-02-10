@@ -8,6 +8,7 @@ import Korpa from './components/Korpa';
 function App() {
   const [korpaProducts, setKorpaProducts]=useState([]);
 
+  const[numProducts, setNumProducts]=useState(0);
   const [products]=useState([
     {
       id:1,
@@ -46,15 +47,13 @@ function App() {
   const [trenutniPr, setTrenutnePr]=useState(products);
   function osveziKorpu(){
     setKorpaProducts(products.filter((product)=>product.kolicina>0));
-    console.log(korpaProducts);
   }
 
   function dodaj(id){
     products.forEach((product)=>{
       if(product.id===id){
         if(product.kolicina<product.naStanju){
-        console.log("Dodat je:"+ id);
-        setKorpaProducts(korpaProducts+1);
+        setNumProducts(numProducts+1);
         product.kolicina++;
         product.ukupnaCena=product.ukupnaCena+product.cena;
         osveziKorpu();
@@ -73,7 +72,7 @@ function App() {
       if(product.id===productID){
         if(product.kolicina>0){
           product.kolicina--;
-        setKorpaProducts(korpaProducts-1);
+        setNumProducts(numProducts-1);
         product.ukupnaCena=product.ukupnaCena-product.cena;
         osveziKorpu();
         }
@@ -86,8 +85,6 @@ function App() {
     if(cena==0){
       setTrenutnePr(products);
     }else{
-      console.log("U pretrazi");
-      console.log(cena);
       const pr=[];
       var k=0;
       products.forEach((product)=>{
@@ -95,9 +92,6 @@ function App() {
           pr[k++]=product;
         }
       });
-      pr.forEach((product)=>{
-        console.log(product.naziv);
-      })
       setTrenutnePr(pr);
     }
   }
@@ -107,9 +101,8 @@ function App() {
       <BrowserRouter className="App">
         <NavBar>
         </NavBar>
-        <div className='homepage'>
         <Routes>
-          
+        
           <Route path='/' element={
             <Products products={trenutniPr}
             dodaj={dodaj}
@@ -117,20 +110,18 @@ function App() {
             pretrazi={pretrazi}
             />
           }
-          />
-          <Route path='/korpa' element={
+          /> 
 
-            <Korpa numProducts={korpaProducts}
+          <Route path='/korpa' element={
+        
+            <Korpa 
+            numProducts={numProducts}
             products={korpaProducts}
             />
           }
+        
           />
-
-
-
         </Routes>
-        </div>
-
       </BrowserRouter>
     </div>
 
